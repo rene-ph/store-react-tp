@@ -1,1 +1,1 @@
-export const getAuthData = (state) => state.storeAuth.auth;
+export const getAuthData = (state:any) => state.storeAuth.auth;

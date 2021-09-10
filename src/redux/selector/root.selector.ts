@@ -1,3 +1,3 @@
-export const getModal = (state) => state.storeRoot.displayModal;
+export const getModal = (state :any) => state.storeRoot.displayModal;
 
-export const getModalDialog = (state) => state.storeRoot.displayModalDialog;
+export const getModalDialog = (state :any) => state.storeRoot.displayModalDialog;

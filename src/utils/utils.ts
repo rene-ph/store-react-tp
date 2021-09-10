@@ -227,12 +227,13 @@ export const validForm = (form: any) => {
 
 export const getFormErrors = (form: any) => {
     let errors: any = [];
+    let value: any;
 
     if (form) {
-        for (var [, value] of Object.entries(form)) {
-           /* if (value.error) {
+        for (value of Object.entries(form)) {
+            if (value.error) {
                 errors.push(value.error);
-            }*/
+            }
         }
     } 
 

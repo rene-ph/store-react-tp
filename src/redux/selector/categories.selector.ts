@@ -1,12 +1,12 @@
 import { createSelector } from "@reduxjs/toolkit";
 
-export const category = (state) => state.storeCategories.categories;
+export const category = (state:any) => state.storeCategories.categories;
 
-export const loading = (state) => state.storeCategories.isLoading;
+export const loading = (state: any) => state.storeCategories.isLoading;
 
 export const getCategories = createSelector(
     category, 
-    (categories) => {
+    (categories: any) => {
         let newArr = [];
         for (let index = 0; index < categories.length; index++) {
             if (newArr.length === 0) {
@@ -21,23 +21,23 @@ export const getCategories = createSelector(
     }
 )
 
-export const getItemByCategoryId = (id) => createSelector(
+export const getItemByCategoryId = (id: any) => createSelector(
     category,
-    (cat) => {
-        return cat.filter(item => item.item_id === id)[0];
+    (cat:any) => {
+        return cat.filter((item:any) => item.item_id === id)[0];
     }
 )
 
-export const getByListOfCategoryById = (id) => createSelector(
+export const getByListOfCategoryById = (id:any) => createSelector(
     category, 
-    (cat) => {
-        return cat.filter(item => item.col_id === id);
+    (cat:any) => {
+        return cat.filter((item:any) => item.col_id === id);
     }
 )
 
 export const getListOfCategories = () => createSelector(
     getCategories,
-    (cat) => {
-         return cat.map( (item) => item.title);
+    (cat:any) => {
+         return cat.map( (item:any) => item.title);
     }
 )
