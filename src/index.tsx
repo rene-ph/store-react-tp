@@ -11,6 +11,7 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
+const CategoryList = React.lazy(() => import('./pages/CategoryList/CategoryList'));
 const Home = React.lazy(() => import('./pages/Home/Home'));
 const PublicRoute = React.lazy(() => import('./components/PublicRoute/PublicRoute'))
 const SignUp = React.lazy(() => import('./pages/SignUp/SignUp'));
@@ -28,6 +29,7 @@ ReactDOM.render(
               <Switch>
                 <PublicRoute path='/login' name='LogIn' component={SignIn} restricted />
                 <PublicRoute path='/register' name='SignUp' component={SignUp} restricted />
+                <Route path='/directory/:id' component={CategoryList} />
                 <Route exact path='/' component={Home} />
               </Switch>
             </Router>
