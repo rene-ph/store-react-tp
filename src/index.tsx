@@ -16,6 +16,7 @@ const Home = React.lazy(() => import('./pages/Home/Home'));
 const PublicRoute = React.lazy(() => import('./components/PublicRoute/PublicRoute'))
 const SignUp = React.lazy(() => import('./pages/SignUp/SignUp'));
 const SignIn = React.lazy(() => import('./pages/SignIn/SignIn'));
+const ShoppingCart = React.lazy(() => import('./pages/ShoppingCart/ShoppingCart'));
 const ErrorFallback = React.lazy(() => import('./components/ErrorFallback/ErrorFallback'));
 
 ReactDOM.render(
@@ -30,6 +31,7 @@ ReactDOM.render(
                 <PublicRoute path='/login' name='LogIn' component={SignIn} restricted />
                 <PublicRoute path='/register' name='SignUp' component={SignUp} restricted />
                 <Route path='/directory/:id' component={CategoryList} />
+                <Route path='/viewcart' component={ShoppingCart} />
                 <Route exact path='/' component={Home} />
               </Switch>
             </Router>
