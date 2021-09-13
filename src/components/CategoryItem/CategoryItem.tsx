@@ -5,7 +5,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import Grid from '@material-ui/core/Grid';
 import ShoppingCartTwoToneIcon from '@material-ui/icons/ShoppingCartTwoTone';
-import useStyles  from './categoryitem.style';
+import useStyles  from './category-item.style';
 import { add } from '../../redux/slice/cart-slice';
 import { FC } from 'react';
 

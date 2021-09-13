@@ -12,6 +12,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const CategoryList = React.lazy(() => import('./pages/CategoryList/CategoryList'));
+const Checkout = React.lazy(() => import('./pages/Checkout/Checkout'));
 const Home = React.lazy(() => import('./pages/Home/Home'));
 const PublicRoute = React.lazy(() => import('./components/PublicRoute/PublicRoute'))
 const SignUp = React.lazy(() => import('./pages/SignUp/SignUp'));
@@ -32,6 +33,7 @@ ReactDOM.render(
                 <PublicRoute path='/register' name='SignUp' component={SignUp} restricted />
                 <Route path='/directory/:id' component={CategoryList} />
                 <Route path='/viewcart' component={ShoppingCart} />
+                <Route path='/checkout' component={Checkout} />
                 <Route exact path='/' component={Home} />
               </Switch>
             </Router>
