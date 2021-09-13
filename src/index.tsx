@@ -2,23 +2,23 @@ import React,  { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Provider } from 'react-redux'
-import AppTheme from './theme/AppTheme';
+import AppTheme from './presentation/theme/AppTheme';
 import { ErrorBoundary } from 'react-error-boundary'
-import Spinner from './components/Spinner/Spinner';
-import { store, persistor } from './redux/store';
+import Spinner from './presentation/components/Spinner/Spinner';
+import { store, persistor } from './domain/redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
-const CategoryList = React.lazy(() => import('./pages/CategoryList/CategoryList'));
-const Checkout = React.lazy(() => import('./pages/Checkout/Checkout'));
-const Home = React.lazy(() => import('./pages/Home/Home'));
-const PublicRoute = React.lazy(() => import('./components/PublicRoute/PublicRoute'))
-const SignUp = React.lazy(() => import('./pages/SignUp/SignUp'));
-const SignIn = React.lazy(() => import('./pages/SignIn/SignIn'));
-const ShoppingCart = React.lazy(() => import('./pages/ShoppingCart/ShoppingCart'));
-const ErrorFallback = React.lazy(() => import('./components/ErrorFallback/ErrorFallback'));
+const CategoryList = React.lazy(() => import('./presentation/pages/CategoryList/CategoryList'));
+const Checkout = React.lazy(() => import('./presentation/pages/Checkout/Checkout'));
+const Home = React.lazy(() => import('./presentation/pages/Home/Home'));
+const PublicRoute = React.lazy(() => import('./presentation/components/PublicRoute/PublicRoute'))
+const SignUp = React.lazy(() => import('./presentation/pages/SignUp/SignUp'));
+const SignIn = React.lazy(() => import('./presentation/pages/SignIn/SignIn'));
+const ShoppingCart = React.lazy(() => import('./presentation/pages/ShoppingCart/ShoppingCart'));
+const ErrorFallback = React.lazy(() => import('./presentation/components/ErrorFallback/ErrorFallback'));
 
 ReactDOM.render(
   <React.StrictMode>
